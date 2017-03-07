@@ -13,15 +13,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.static('public'));
-// app.get('/', (request, response) => {
-//   // response.send('welcome');
-//   const people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
-//   response.render( 'index', {title: 'Hall of Fame', people: people} );
-// });
 
-// app.get('/news', (request, response) => {
-//   response.send('THE NEWS');
-// });
 
 //NUNJUCKS
 
