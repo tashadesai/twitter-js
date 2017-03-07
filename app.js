@@ -23,6 +23,11 @@ app.engine('html', nunjucks.render); // when giving html files to res.render, te
 nunjucks.configure('views', {noCache: true});// point nunjucks to the proper directory for templates
 
 
+
+
+
+
+
 app.listen(3000, function () {
   console.log('server listening');
 });
