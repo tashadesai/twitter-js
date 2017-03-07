@@ -18,8 +18,8 @@
         <div id="tweetList">
           <img id="icon" src="https://i.ytimg.com/vi/opKg3fyqWt4/hqdefault.jpg">
           <div id="tweetDisplay">
-            <p id="name">{{tweet.name}}</p>
-            <p id="tweet">{{tweet.content}}</p>
+            <p id="name"><a href="/users/{{tweet.name}}">{{tweet.name}}</a> </p>
+            <p id="tweet"><a href="/tweet/{{tweet.id}}">{{tweet.content}}</a></p>
           </div>
         </div>
       {% endfor %}
