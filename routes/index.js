@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const bodyParser = require('body-parser');
+
 // could use one line instead: const router = require('express').Router();
 const tweetBank = require('../tweetBank');
 
@@ -21,13 +21,6 @@ router.get('/tweet/:id', function(req, res) {
   res.render('index', {tweets: list});
 })
 
-
-//body-parser
-// parse application/x-www-form-urlencoded
-router.use(bodyParser.urlencoded({ extended: false }))
-
-// parse routerlication/json
-router.use(bodyParser.json())
 
 router.post('/tweets', function(req, res) {
   var name = req.body.name;
