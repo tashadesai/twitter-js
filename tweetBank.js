@@ -38,4 +38,5 @@ for (let i = 0; i < 10; i++) {
 }
 
 
-console.log(data);
+// console.log(data);
+//

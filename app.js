@@ -2,21 +2,26 @@
 const express = require( 'express' );
 const app = express(); // creates an instance of an express application
 const nunjucks = require('nunjucks');
+const routes = require('./routes');
 
+app.use('/', routes);
+
+//console logs VERB and URI on server
 app.use((req, res, next) => {
   console.log(req.method + ' ' + req.url);
   next();
 });
 
-app.get('/', (request, response) => {
-  // response.send('welcome');
-  const people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
-  response.render( 'index', {title: 'Hall of Fame', people: people} );
-});
+app.use(express.static('public'));
+// app.get('/', (request, response) => {
+//   // response.send('welcome');
+//   const people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
+//   response.render( 'index', {title: 'Hall of Fame', people: people} );
+// });
 
-app.get('/news', (request, response) => {
-  response.send('THE NEWS');
-});
+// app.get('/news', (request, response) => {
+//   response.send('THE NEWS');
+// });
 
 //NUNJUCKS
 
