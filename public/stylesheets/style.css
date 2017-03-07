@@ -57,3 +57,25 @@ code {
 .content .by {
   font-weight: bold;
 }
+
+#name {
+  font-weight: bold;
+  /*display: inline;*/
+}
+
+#tweet {
+  /*display: inline-block;*/
+}
+
+#icon {
+  height: 50px;
+  float: left;
+}
+
+#tweetDisplay {
+  display: inline-block;
+}
+
+#tweetList {
+  display: inline-block;
+}
